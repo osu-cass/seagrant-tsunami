@@ -9,13 +9,42 @@ namespace VideoPage {
         name: string;
     }
 
-    export interface props {
+    export interface Place {
+        name: string
+    }
+
+    export interface Props {
 
     }
 
-    export interface state {
+    export interface State {
 
     }
+
+    class VideoFrameComponent extends React.Component<VideoProps, {}> {
+        constructor(props: VideoProps) {
+            super(props);
+        }
+
+        render() {
+            return (
+                <video src="foo.mp4" />
+            );
+        }
+    }
+
+    export class MainPageComponent extends React.Component<Props, State> {
+        constructor(props: Props) {
+            super(props);
+        }
+
+        render() {
+            return (
+                <VideoFrameComponent />
+                );
+        }
+    }
+
 
 
     function initVideoPage() {
