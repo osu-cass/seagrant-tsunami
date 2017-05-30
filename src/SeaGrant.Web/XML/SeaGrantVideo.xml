@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Places
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="SeaGrantVideo.xsd">
+  <Place>
+    <Name>South Beach</Name>
+    <Description>The South Beach</Description>
+    <Videos>
+      <Video>
+        <VideoName>Jetty</VideoName>
+        <FileName>jetty.mp4</FileName>
+        <Description>Description for Jetty</Description>
+      </Video>
+      <Video>
+        <VideoName>ParkingLot</VideoName>
+        <FileName>parkinglot.mp4</FileName>
+        <Description>Description for parking lot</Description>
+      </Video>
+    </Videos>
+  </Place>
+</Places>
