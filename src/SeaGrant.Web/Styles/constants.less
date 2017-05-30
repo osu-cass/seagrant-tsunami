@@ -1,0 +1,73 @@
+﻿@phone-portrait: 550px;
+@small: 760px;
+@medium: 800px;
+
+@font-size-header: 48px;
+@font-size-base: 16px;
+@font-size-larger: 18px;
+@font-size-smaller: 14px;
+
+@link-color: #007393;
+
+@navbar-height: 50px;
+
+
+@charset "utf-8";
+
+@base-font-family: "Roboto Slab"; 
+@base-font-size: 16px;
+@font-size-larger: 18px; 
+@font-size-smaller: 14px; 
+@base-font-weight: 150; 
+@small-font-size: @base-font-size * 0.875; 
+@base-line-height: 24; 
+@spacing-unit: 30px; 
+@footer-height: 30px; 
+@border-height: 1px;
+@navbar-height: 50px; 
+@text-color: #111; 
+@text-color-light: #f2f2f2; 
+@background-color: #fff; 
+@brand-color: #2a7ae2; 
+@brand-color-light:#629dea; 
+@brand-color-dark: darken(@brand-color, 25%); 
+@grey-color: #828282;
+@grey-color-light: lighten(@grey-color, 40%); 
+@grey-color-dark: darken(@grey-color, 25%);
+@background-color: #f3f3f3;
+@background-color-dark: darken(@background-color, 30%);
+@box-shadow: 0 0 0 1px rgba(0,0,0,.1), 0 2px 3px rgba(0,0,0,.2); 
+@on-palm: 600px;
+@on-laptop: 1200px;
+@block-background-color: #fff;
+@block-background-color-dark: @grey-color-light;
+@block-boarder-color: #ddd;
+@content-width: 1400px;
+
+@media-default-width: 600px;
+@media-default-height: 400px;
+
+@media-palm-width: 400px;
+@media-palm-height: @media-palm-width * @media-default-height / @media-default-width;
+
+
+
+.font-rem (@size) {
+    font-size: 0px + @size;
+    font-size: 0rem + @size / @base-font-size;
+}
+
+.font (@size) {
+    font-size: 0px + @size;
+    font-size: 0rem + @size / @base-font-size;
+    line-height: 0 + round(@base-line-height / @size*10000) / 10000;
+}
+
+// full-fat vertical rhythm
+.font-size (@size) {
+    font-size: 0px + @size;
+    font-size: 0rem + @size / @base-font-size;
+    line-height: 0 + round(@base-line-height / @size*10000) / 10000;
+    margin-bottom: 0px + @base-line-height;
+    margin-bottom: 0rem + (@base-line-height / @base-font-size);
+}

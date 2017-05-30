@@ -1,0 +1,107 @@
+﻿@inject Microsoft.ApplicationInsights.AspNetCore.JavaScriptSnippet JavaScriptSnippet
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Sea Grant</title>
+
+    <environment names="Development">
+        <link rel="stylesheet" href="~/css/site.css" />
+    </environment>
+    <environment names="Staging,Production">
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+    </environment>
+
+    <link href="https://fonts.googleapis.com/css?family=Gentium+Basic|PT+Serif|Roboto+Slab" rel="stylesheet">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="~/icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="~/icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="~/icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="~/icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="~/icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="~/icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="~/icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="~/icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="~/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="~/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="~/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="~/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="~/icons/favicon-16x16.png">
+    <link rel="manifest" href="~/icons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="~/icons//ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    @Html.Raw(JavaScriptSnippet.FullScript)
+</head>
+<body>
+    <header class="site-header">
+
+        <div class="wrapper">
+            <div class="title-container">
+                <img class="header-logo" src="~/images/seagrant.jpg" alt="NOAA Sea Grant" />
+                <a class="site-title" href="@Url.Action(action: "Index", controller: "Home")">Sea Grant Oregon</a>
+
+            </div>
+            <nav class="site-nav">
+                <a href="#" class="menu-icon">
+                    <svg viewBox="0 0 18 15">
+                        <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z" />
+                        <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z" />
+                        <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z" />
+                    </svg>
+                </a>
+
+                <div class="trigger">
+                    <ul>
+                        <li>
+                            <a class="page-link" href="@Url.Action(action: "Index", controller: "Home")">Home</a>
+                        </li>
+                        <li>
+                            <a class="page-link" href="@Url.Action(action: "Index", controller: "Map")">Map</a>
+                        </li>
+                        <li>
+                            <a class="page-link" href="@Url.Action(action: "Index", controller: "Products")">Products</a>
+                        </li>
+                        <li>
+                            <a class="page-link" href="@Url.Action(action: "Index", controller: "Places")">Places</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+        </div>
+
+    </header>
+
+    <div class="container page-content body-content">
+        <div class="wrapper page-container">
+            @RenderBody()
+        </div>
+    </div>
+    <footer class="site-footer">
+        <div class="wrapper container">
+            <p>&copy; 2017 - NOAA Sea Grant Oregon</p>
+        </div>
+    </footer>
+
+    <environment names="Development">
+        <script src="~/scripts/Polyfill.js"></script>
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/react/react.js"></script>
+        <script src="~/lib/react/react-dom.js"></script>
+    </environment>
+    <environment names="Staging,Production">
+        <script src="~/scripts/Polyfill.min.js"></script>
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/react/react.min.js"></script>
+        <script src="~/lib/react/react-dom.min..js"></script>
+    </environment>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGZcmApzX-gaRE6ID8KpA_OJvIIEDVQ3M"></script>
+
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

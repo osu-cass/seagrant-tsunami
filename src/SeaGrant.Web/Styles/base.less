@@ -1,0 +1,157 @@
+﻿@import "constants.less";
+
+h1, h2, h3, h4, h5, h6, blockquote, iframe, label, p, pre, address, td, th, ul, ol, dl, dd, hr,
+table, small {
+    margin-top: 0;
+}
+
+ul {
+    margin: 0;
+}
+body {
+    font: @base-font-weight @base-font-family, 'PT Serif', serif;
+    color: @text-color;
+    background-color: @background-color;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-feature-settings: "kern" 1;
+    -moz-font-feature-settings: "kern" 1;
+    -o-font-feature-settings: "kern" 1;
+    font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    margin: 0 0 (@footer-height + @border-height);
+    padding-bottom: @spacing-unit;
+
+}
+
+h1 {
+    .font-size(32);
+}
+
+h2 {
+    .font-rem(20);
+}
+h3, h4, h5 {
+    .font-rem(18);
+}
+
+h6 {
+    .font(16);
+}
+
+
+
+html {
+    min-height: 100%;
+    position: relative;
+}
+
+
+figure > img {
+    display: block;
+}
+
+figcaption {
+    font-size: @small-font-size;
+}
+
+
+
+li {
+    > ul,
+    > ol {
+        margin-bottom: 0;
+    }
+}
+
+
+a {
+    color: @brand-color-dark;
+    text-decoration: none;
+
+    &:hover {
+        color: @text-color;
+    }
+}
+
+blockquote {
+    color: @grey-color;
+    border-left: 4px solid @grey-color-light;
+    padding-left: @spacing-unit / 2;
+    font-size: 18px;
+    letter-spacing: -1px;
+    font-style: italic;
+
+    > :last-child {
+        margin-bottom: 0;
+    }
+}
+
+pre,
+code {
+    font-size: 15px;
+    border: @border-height solid @grey-color-light;
+    border-radius: 3px;
+    background-color: #eef;
+}
+
+code {
+    padding: 1px 5px;
+}
+
+pre {
+    padding: 8px 12px;
+    overflow-x: auto;
+
+    > code {
+        border: 0;
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+
+.wrapper {
+    max-width: -webkit-calc(@content-width - (@spacing-unit * 2));
+    max-width: calc(@content-width - @spacing-unit*2);
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: @spacing-unit;
+    padding-left: @spacing-unit;
+}
+
+@media only screen and (max-width: @on-palm) {
+    .wrapper {
+        max-width: -webkit-calc(@on-palm - (@spacing-unit * 2));
+        max-width: calc(@on-palm - @spacing-unit*2);
+        padding-left: @spacing-unit/2;
+    }
+
+}
+
+@media only screen and (min-width: @on-palm) and (max-width: @on-laptop) {
+    .wrapper {
+        max-width: -webkit-calc(@on-laptop - (@spacing-unit * 2));
+        max-width: calc(@on-laptop - @spacing-unit*2);
+    }
+}
+
+.icon {
+    > svg {
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        vertical-align: middle;
+
+        path {
+            fill: @grey-color;
+        }
+    }
+}
+
+.icon-linkedin, .icon-github {
+    > svg {
+        width: 16px;
+        height: 16px;
+    }
+}
+

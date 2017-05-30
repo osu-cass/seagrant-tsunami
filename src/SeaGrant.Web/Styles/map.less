@@ -1,0 +1,29 @@
+﻿@import "constants.less";
+.map {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+}
+
+.map-container {
+    height: 80vh;
+    flex: 3;
+
+    @media only screen and (max-width: @on-palm) {
+        height: 53vh;
+        width: 98%;
+    }
+
+    position: relative;
+
+    a:hover {
+        background-color: green;
+    }
+}
+
+.map-container.vendor {
+    height: 40vh;
+    width: 40vh;
+}
