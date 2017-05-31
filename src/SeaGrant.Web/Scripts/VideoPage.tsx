@@ -33,17 +33,17 @@ namespace VideoPage {
         }
     }
 
-    export class MainPageComponent extends React.Component<Props, State> {
-        constructor(props: Props) {
-            super(props);
-        }
+    //export class MainPageComponent extends React.Component<Props, State> {
+    //    constructor(props: Props) {
+    //        super(props);
+    //    }
 
-        render() {
-            return (
-                <VideoFrameComponent />
-                );
-        }
-    }
+    //    render() {
+    //        return (
+    //            //<VideoFrameComponent />
+    //            );
+    //    }
+    //}
 
 
 

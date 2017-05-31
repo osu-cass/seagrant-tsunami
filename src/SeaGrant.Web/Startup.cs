@@ -9,6 +9,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.FileProviders;
 using System.IO;
+using SeaGrant.Web.Configuration;
+using SeaGrant.Web.Providers;
+using SeaGrant.Web.Utils;
 
 namespace SeaGrant.Web
 {
@@ -31,6 +34,15 @@ namespace SeaGrant.Web
         {
             // Add framework services.
             services.AddMvc();
+
+            // Add custom appsettings
+            services.Configure<AppSettings>(Configuration);
+            AppSettings settings = new AppSettings();
+            Configuration.Bind(settings);
+
+            TsunamiContext context = TsunamiContextProvider.LoadContext(settings);
+
+            services.AddSingleton(context);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
