@@ -1,6 +1,12 @@
-﻿@{
+﻿@model SeaGrant.Web.Models.MainPageVM
+
+@{
     ViewData["Title"] = "Home Page";
 }
+
+<script type="text/javascript">
+    initVideoPage(@Model);
+</script>
 
 <h1>Sea Grant Tsunami Beta</h1>
 <div class="home-page">

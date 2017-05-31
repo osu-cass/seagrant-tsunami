@@ -4,21 +4,20 @@
 
 namespace VideoPage {
 
+    export interface PageVM {
+        places: Place[];
+    }
+
     interface VideoProps {
         source: string;
         name: string;
+        description: string;
     }
 
     export interface Place {
-        name: string
-    }
-
-    export interface Props {
-
-    }
-
-    export interface State {
-
+        name: string;
+        description: string;
+        videos: VideoProps[];
     }
 
     class VideoFrameComponent extends React.Component<VideoProps, {}> {
@@ -33,27 +32,34 @@ namespace VideoPage {
         }
     }
 
-    //export class MainPageComponent extends React.Component<Props, State> {
-    //    constructor(props: Props) {
-    //        super(props);
-    //    }
+    class VideoListComponent extends React.Component<{}, {}> {
 
-    //    render() {
-    //        return (
-    //            //<VideoFrameComponent />
-    //            );
-    //    }
-    //}
-
-
-
-    function initVideoPage() {
-        const mainDiv = document.getElementById("main") as HTMLElement;
-        const menuDiv = document.getElementById("menu") as HTMLElement;
-
-       // ReactDOM.render();
     }
 
+    class NavigationComponent extends React.Component<{}, {}> {
+
+    }
+
+    export class Controller {
+
+        constructor(private pageVM: VideoPage.PageVM) {
+        }
+
+
+
+        render() {
+
+        }
+    }
+
+
 }
+
+function initVideoPage(pageVM: VideoPage.PageVM) {
+    const controller = new VideoPage.Controller(pageVM);
+
+    controller.render();
+}
+
 
 
