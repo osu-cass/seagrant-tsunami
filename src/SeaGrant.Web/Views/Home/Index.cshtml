@@ -8,7 +8,41 @@
     initVideoPage(@Model);
 </script>
 
-<h1>Sea Grant Tsunami Beta</h1>
+<h1 style="text-align:center;">Sea Grant Tsunami Beta</h1>
 <div class="home-page">
-</div>
 
+    <div class="TitleClass" id="Title">
+        <select>
+            <option value="22" label="South Beach 1"/>
+            <option value="22" label="South Beach 2" />
+            <option value="22" label="South Beach 3" />
+            <option value="22" label="South Beach 4" />
+        </select>
+    </div>
+    <div class="DescListClass" id="DescList">
+        <p>            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Aliquam pretium euismod orci eget convallis. Nulla euismod aliquet ullamcorper. 
+        Curabitur at rhoncus ipsum. Morbi id ornare nisi, vel luctus lacus.
+        Mauris dapibus tempus nisi, id fermentum augue ultrices pellentesque. 
+        Aenean vel magna at mi feugiat vehicula. 
+        Suspendisse ullamcorper est sapien, in dictum erat pellentesque ac.
+        Praesent semper non justo vitae tincidunt.
+        Phasellus pulvinar elementum augue, eu dictum ante elementum sed.
+        Nullam vitae nisi sit amet mauris tempus sagittis vitae eu massa. 
+        Aliquam at ipsum vitae elit aliquet imperdiet. Vivamus vel justo accumsan, pretium turpis sed, varius augue. Quisque id volutpat ex.</p>
+        <ul class="VideoListClass">
+            <li class="VideoListItemClass"> Video 1</li>
+            <li> Video 2</li>
+            <li> Video 3</li>
+        </ul>
+    </div>
+    <div class="VideoClass"  id="Video">
+        <video src="~/videos/Blue.mp4" controls>
+            Sorry, your browser doesn't support embedded videos,
+            but don't worry, you can
+            <a href="~/videos/Blue.mp4">download it</a>
+            and watch it with your favorite video player!
+        </video>
+    </div>
+    <div id="ScaredMessage" style="font-family: 'Comic Sans MS'; font-size:42px; text-align:center;">Don't Panic</div>
+</div>

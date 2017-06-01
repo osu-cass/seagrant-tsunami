@@ -9,6 +9,10 @@
     <AssemblyName>SeaGrant.Web</AssemblyName>
     <RootNamespace>SeaGrant.Web</RootNamespace>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="wwwroot\videos\Blue.mp4" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Dockerfile" CopyToPublishDirectory="Always" />
     <None Include=".dockerignore" CopyToPublishDirectory="Always" />
