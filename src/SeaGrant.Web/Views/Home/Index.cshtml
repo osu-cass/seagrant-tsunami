@@ -4,13 +4,10 @@
     ViewData["Title"] = "Home Page";
 }
 
-<script type="text/javascript">
-    initVideoPage(@Model);
-</script>
-
 <h1 style="text-align:center;">Sea Grant Tsunami Beta</h1>
 <div class="home-page" id="page-container">
 
+    <!--
     <div class="TitleClass" id="Title">
         <select>
             <option value="22" label="South Beach 1"/>
@@ -43,6 +40,25 @@
             <a href="~/videos/Blue.mp4">download it</a>
             and watch it with your favorite video player!
         </video>
-    </div>
-    <div id="ScaredMessage" style="font-family: 'Comic Sans MS'; font-size:42px; text-align:center;">Don't Panic</div>
+    </div>-->
 </div>
+<div id="ScaredMessage" style="font-family: 'Comic Sans MS'; font-size:42px; text-align:center;">Don't Panic</div>
+
+@section Scripts {
+    <environment names="Development">
+        <script src="~/scripts/VideoListElement.js"></script>
+        <script src="~/scripts/VideoList.js"></script>
+        <script src="~/scripts/VideoFrame.js"></script>
+        <script src="~/scripts/MainPage.js"></script>
+    </environment>
+    <environment names="Staging, Production">
+        <script src="~/scripts/VideoListElement.min.js"></script>
+        <script src="~/scripts/VideoList.min.js"></script>
+        <script src="~/scripts/VideoFrame.min.js"></script>
+        <script src="~/scripts/MainPage.min.js"></script>
+    </environment>
+
+    <script type="text/javascript">
+        initMainPage(@Json.Serialize(Model));
+    </script>
+}

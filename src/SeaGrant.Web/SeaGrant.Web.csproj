@@ -12,6 +12,9 @@
 
   <ItemGroup>
     <Content Include="wwwroot\videos\Blue.mp4" />
+    <Content Include="wwwroot\videos\Green.mp4" />
+    <Content Include="wwwroot\videos\Purple.mp4" />
+    <Content Include="wwwroot\videos\Yellow.mp4" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Dockerfile" CopyToPublishDirectory="Always" />

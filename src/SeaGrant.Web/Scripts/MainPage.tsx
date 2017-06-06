@@ -6,11 +6,10 @@ namespace MainPage {
 
     export interface PageVM {
         places: Place[];
-        currentPlace: Place;
     }
 
     export interface VideoDetails {
-        source: string;
+        fileName: string;
         name: string;
         description: string;
     }
@@ -19,6 +18,11 @@ namespace MainPage {
         name: string;
         description: string;
         videos: VideoDetails[];
+        currentVideo: VideoDetails;
+    }
+
+    interface State {
+        currentPlace: Place;
         currentVideo: VideoDetails;
     }
 
@@ -31,22 +35,25 @@ namespace MainPage {
         currentVideo: VideoDetails;
         constructor(private pageVM: MainPage.PageVM, private rootDiv: HTMLDivElement) {
             this.currentPlace = this.pageVM.places[0];
-            this.currentVideo = this.pageVM.currentPlace.videos[0];
+            this.currentVideo = this.pageVM.places[0].videos[0];
         }
 
         changePlace = (newPlace: Place) => {
-            this.pageVM.currentPlace = newPlace;
+            this.currentPlace = newPlace;
+            this.render();
         }
 
         changeVideo = (newVideo: VideoDetails) => {
-            this.pageVM.currentPlace.currentVideo = newVideo;
+            this.currentVideo = newVideo;
+            this.render();
         }
 
         render() {
             ReactDOM.render(
-                <VideoFrame.VideoFrameComponent
-                    {...this.currentVideo}
-                />,
+                <div>
+                    <VideoList.VideoListComponent videos={this.currentPlace.videos} updateVideoSelection={this.changeVideo} />
+                    <VideoFrame.VideoFrameComponent {...this.currentVideo} />
+                </div>,
                 this.rootDiv
             );
         }
@@ -55,7 +62,7 @@ namespace MainPage {
 
 }
 
-function initVideoPage(pageVM: MainPage.PageVM) {
+function initMainPage(pageVM: MainPage.PageVM) {
     const rootDiv = document.getElementById("page-container") as HTMLDivElement;
     const controller = new MainPage.Controller(pageVM, rootDiv);
 

@@ -11,16 +11,17 @@ namespace VideoListElement {
     export class VideoListElementComponent extends React.Component<Props, {}> {
         constructor(props: Props) {
             super(props);
+            //this.clickHandler = this.clickHandler.bind(this);
         }
 
-        clickHandler = (e: React.MouseEvent<HTMLElement>) => {
-            e.preventDefault();
+        clickHandler = () => {
             this.props.videoClickHandler(this.props.video);
         }
 
         render() {
-            return(
-                <li value={this.props.video.name} onClick={(e) => this.clickHandler(e)}> {this.props.video.name}</li>
+            const video = this.props.video;
+            return (
+                <li value={this.props.video.name} onClick={this.clickHandler}> {this.props.video.name}</li>
             );
         }
     }

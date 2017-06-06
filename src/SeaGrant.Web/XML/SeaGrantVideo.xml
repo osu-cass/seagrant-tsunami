@@ -9,12 +9,12 @@
     <Videos>
       <Video>
         <VideoName>Jetty</VideoName>
-        <FileName>jetty.mp4</FileName>
+        <FileName>/videos/Blue.mp4</FileName>
         <Description>Description for Jetty</Description>
       </Video>
       <Video>
         <VideoName>ParkingLot</VideoName>
-        <FileName>parkinglot.mp4</FileName>
+        <FileName>/videos/Green.mp4</FileName>
         <Description>Description for parking lot</Description>
       </Video>
     </Videos>
@@ -25,13 +25,13 @@
     <Description>The South Beach</Description>
     <Videos>
       <Video>
-        <VideoName>Jetty</VideoName>
-        <FileName>jetty.mp4</FileName>
+        <VideoName>Rocks</VideoName>
+        <FileName>/videos/Purple.mp4</FileName>
         <Description>Description for Jetty</Description>
       </Video>
       <Video>
-        <VideoName>ParkingLot</VideoName>
-        <FileName>parkinglot.mp4</FileName>
+        <VideoName>Sand</VideoName>
+        <FileName>/videos/Yellow.mp4</FileName>
         <Description>Description for parking lot</Description>
       </Video>
     </Videos>
