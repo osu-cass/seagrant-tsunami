@@ -1,38 +1,42 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-
 <Places
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:noNamespaceSchemaLocation="SeaGrantVideo.xsd">
   <Place>
     <Name>South Beach</Name>
     <Description>The South Beach</Description>
+    <Order>2</Order>
     <Videos>
       <Video>
         <VideoName>Jetty</VideoName>
         <FileName>/videos/Blue.mp4</FileName>
         <Description>Description for Jetty</Description>
+        <Order>2</Order>
       </Video>
       <Video>
         <VideoName>ParkingLot</VideoName>
         <FileName>/videos/Green.mp4</FileName>
         <Description>Description for parking lot</Description>
+        <Order>1</Order>
       </Video>
     </Videos>
   </Place>
-
   <Place>
     <Name>North Beach</Name>
-    <Description>The South Beach</Description>
+    <Description>The North Beach</Description>
+    <Order>1</Order>
     <Videos>
       <Video>
         <VideoName>Rocks</VideoName>
         <FileName>/videos/Purple.mp4</FileName>
         <Description>Description for Jetty</Description>
+        <Order>1</Order>
       </Video>
       <Video>
         <VideoName>Sand</VideoName>
         <FileName>/videos/Yellow.mp4</FileName>
         <Description>Description for parking lot</Description>
+        <Order>2</Order>
       </Video>
     </Videos>
   </Place>

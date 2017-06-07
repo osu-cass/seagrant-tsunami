@@ -8,6 +8,7 @@
             <xs:sequence>
               <xs:element name="Name" type="xs:string" />
               <xs:element name="Description" type="xs:string" />
+              <xs:element name="Order" type="xs:integer" />
               <xs:element name="Videos">
                 <xs:complexType>
                   <xs:sequence>
@@ -17,6 +18,7 @@
                           <xs:element name="VideoName" type="xs:string" />
                           <xs:element name="FileName" type="xs:string" />
                           <xs:element name="Description" type="xs:string" />
+                          <xs:element name="Order" type="xs:integer" />
                         </xs:sequence>
                       </xs:complexType>
                     </xs:element>

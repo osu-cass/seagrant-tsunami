@@ -10,9 +10,14 @@ namespace SeaGrant.Web.Models
     {
         [XmlElement("VideoName")]
         public string Name { get; set; }
+
         [XmlElement("FileName")]
         public string FileName { get; set; }
+
         [XmlElement("Description")]
         public string Description { get; set; }
+
+        [XmlElement(elementName: "Order")]
+        public int Order { get; set; }
     }
 }

@@ -10,8 +10,13 @@ namespace SeaGrant.Web.Models
     {
         [XmlElement(elementName:"Name")]
         public string Name { get; set; }
+
         [XmlElement(elementName: "Description")]
         public string Description { get; set; }
+
+        [XmlElement(elementName: "Order")]
+        public int Order { get; set; }
+
         [XmlArray(elementName: "Videos")]
         [XmlArrayItem(elementName: "Video", type: typeof(Video))]
         public List<Video> Videos { get; set; }
