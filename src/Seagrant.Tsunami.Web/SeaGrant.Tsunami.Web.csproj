@@ -11,13 +11,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="wwwroot\images\2e3ybe1.jpg" />
-    <Content Include="wwwroot\videos\Blue.mp4" />
-    <Content Include="wwwroot\videos\Green.mp4" />
-    <Content Include="wwwroot\videos\Purple.mp4" />
-    <Content Include="wwwroot\videos\Yellow.mp4" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Dockerfile" CopyToPublishDirectory="Always" />
     <None Include=".dockerignore" CopyToPublishDirectory="Always" />
   </ItemGroup>
@@ -40,6 +33,8 @@
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="1.0.1" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="wwwroot\images\" />
+    <Folder Include="wwwroot\videos\" />
     <Folder Include="wwwroot\css\" />
     <Folder Include="wwwroot\js\" />
     <Folder Include="wwwroot\icons\" />
