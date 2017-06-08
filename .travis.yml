@@ -52,5 +52,6 @@ deploy:
     script: ./app_docker_deploy.sh
     on:
         tags: true
+        all_branches: true
 
   
