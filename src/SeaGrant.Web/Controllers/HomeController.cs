@@ -16,9 +16,9 @@ namespace SeaGrant.Web.Controllers
         {
             context = tsunamiContext;
         }
-        public IActionResult Index()
+        public IActionResult Index(bool demoMode = false)
         {
-            var pageVM = new MainPageVM(context.Places);
+            var pageVM = new MainPageVM(context.Places, demoMode);
             return View(pageVM);
         }
 
