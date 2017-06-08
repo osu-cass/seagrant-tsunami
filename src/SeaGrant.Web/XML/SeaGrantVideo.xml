@@ -29,13 +29,13 @@
       <Video>
         <VideoName>Rocks</VideoName>
         <FileName>/videos/Purple.mp4</FileName>
-        <Description>Description for Jetty</Description>
+        <Description>Description for Rocks</Description>
         <Order>1</Order>
       </Video>
       <Video>
         <VideoName>Sand</VideoName>
         <FileName>/videos/Yellow.mp4</FileName>
-        <Description>Description for parking lot</Description>
+        <Description>Description for Sand</Description>
         <Order>2</Order>
       </Video>
     </Videos>
