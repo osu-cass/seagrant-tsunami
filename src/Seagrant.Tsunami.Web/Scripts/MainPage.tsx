@@ -18,16 +18,11 @@ namespace MainPage {
         name: string;
         description: string;
         videos: VideoDetails[];
-        currentVideo: VideoDetails;
     }
 
     interface State {
         currentPlace: Place;
         currentVideo: VideoDetails;
-    }
-
-    class NavigationComponent extends React.Component<{}, {}> {
-
     }
 
     export class Controller {
@@ -40,6 +35,7 @@ namespace MainPage {
 
         changePlace = (newPlace: Place) => {
             this.currentPlace = newPlace;
+            this.currentVideo = newPlace.videos[0];
             this.render();
         }
 
@@ -51,6 +47,8 @@ namespace MainPage {
         render() {
             ReactDOM.render(
                 <div>
+                    <PlacesList.PlacesListComponent places={this.pageVM.places} onChangeHandler={this.changePlace} />
+                    <div>{this.currentPlace.description}</div>
                     <VideoList.VideoListComponent videos={this.currentPlace.videos} updateVideoSelection={this.changeVideo} />
                     <VideoFrame.VideoFrameComponent {...this.currentVideo} />
                 </div>,

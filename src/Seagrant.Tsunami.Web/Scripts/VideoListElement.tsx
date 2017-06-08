@@ -11,7 +11,6 @@ namespace VideoListElement {
     export class VideoListElementComponent extends React.Component<Props, {}> {
         constructor(props: Props) {
             super(props);
-            //this.clickHandler = this.clickHandler.bind(this);
         }
 
         clickHandler = () => {

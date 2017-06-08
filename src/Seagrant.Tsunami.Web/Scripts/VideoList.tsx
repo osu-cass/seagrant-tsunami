@@ -34,12 +34,13 @@ namespace VideoList {
             const videos = this.props.videos.map((v: MainPage.VideoDetails) => {
                 return <VideoListElement.VideoListElementComponent video={v} videoClickHandler={this.videoClickHandler} />
             });
-            return <div id="DescList" className="DescListClass">
-                <h2>{this.state.description}</h2>
-                <ul className="VideoListClass">
-                    {videos}
-                </ul>
-                </div>;
+            return (
+                <div id="DescList" className="DescListClass">
+                    <ul className="VideoListClass">
+                        {videos}
+                    </ul>
+                </div>
+            );
         }
 
     }
