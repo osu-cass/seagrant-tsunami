@@ -22,7 +22,7 @@
                 );
         }
 
-        findPlaceByName(name: string): MainPage.Place {
+        findPlaceByName = (name: string): MainPage.Place => {
             for (let place of this.props.places) {
                 if (place.name == name) {
                     return place;
