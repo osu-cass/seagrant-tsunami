@@ -13,6 +13,7 @@ namespace VideoFrame {
             return (
                 <div id="Video" className="Video">
                     <video src={this.props.fileName} controls autoPlay> Sorry, this browser doesn't support embedded videos.</video>
+                    <div>{this.props.description}</div>
                 </div>
             );
         }
