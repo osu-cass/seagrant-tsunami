@@ -9,9 +9,11 @@ namespace SeaGrant.Web.Models
     public class MainPageVM
     {
         public ImmutableArray<Place> Places { get; }
-        public MainPageVM(ImmutableArray<Place> places)
+        public bool DemoMode { get; }
+        public MainPageVM(ImmutableArray<Place> places, bool demoMode)
         {
             Places = places;
+            DemoMode = demoMode;
         }
     }
 }
