@@ -3,4 +3,4 @@ ARG source=.
 WORKDIR /app
 EXPOSE 80
 COPY $source .
-ENTRYPOINT ["dotnet", "SeaGrant.Web.dll"]
+ENTRYPOINT ["dotnet", "SeaGrant.Tsunami.Web.dll"]

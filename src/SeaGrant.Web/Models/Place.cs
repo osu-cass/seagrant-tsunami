@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
 
-namespace SeaGrant.Web.Models
+namespace SeaGrant.Tsunami.Web.Models
 {
     public class Place
     {

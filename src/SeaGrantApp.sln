@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26510.0
+VisualStudioVersion = 15.0.26430.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SeaGrant.Web", "SeaGrant.Web\SeaGrant.Web.csproj", "{7C9680F3-3E54-44F1-AA01-0DDCCB7167AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SeaGrant.Tsunami.Web", "SeaGrant.Web\SeaGrant.Tsunami.Web.csproj", "{7C9680F3-3E54-44F1-AA01-0DDCCB7167AE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -6,8 +6,8 @@
 
   <PropertyGroup>
     <PackageTargetFallback>$(PackageTargetFallback);portable-net45+win8+wp8+wpa81;</PackageTargetFallback>
-    <AssemblyName>SeaGrant.Web</AssemblyName>
-    <RootNamespace>SeaGrant.Web</RootNamespace>
+    <AssemblyName>SeaGrant.Tsunami.Web</AssemblyName>
+    <RootNamespace>SeaGrant.Tsunami.Web</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

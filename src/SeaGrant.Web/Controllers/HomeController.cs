@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using SeaGrant.Web.Providers;
-using SeaGrant.Web.Models;
+using SeaGrant.Tsunami.Web.Providers;
+using SeaGrant.Tsunami.Web.Models;
 
-namespace SeaGrant.Web.Controllers
+namespace SeaGrant.Tsunami.Web.Controllers
 {
     public class HomeController : Controller
     {

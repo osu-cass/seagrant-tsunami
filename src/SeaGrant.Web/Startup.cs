@@ -9,11 +9,11 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.FileProviders;
 using System.IO;
-using SeaGrant.Web.Configuration;
-using SeaGrant.Web.Providers;
-using SeaGrant.Web.Utils;
+using SeaGrant.Tsunami.Web.Configuration;
+using SeaGrant.Tsunami.Web.Providers;
+using SeaGrant.Tsunami.Web.Utils;
 
-namespace SeaGrant.Web
+namespace SeaGrant.Tsunami.Web
 {
     public class Startup
     {

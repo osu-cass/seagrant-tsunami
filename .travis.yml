@@ -9,7 +9,7 @@ install:
   - travis_retry pip install ecs-deploy
   - travis_retry pip install --user awscli
   - export PATH=$PATH:$HOME/.local/bin
-  - cd $TRAVIS_BUILD_DIR/src/SeaGrant.Web
+  - cd $TRAVIS_BUILD_DIR/src/SeaGrant.Tsunami.Web
   - travis_retry npm install 
   - travis_retry $(npm bin)/bower install
   - travis_retry dotnet restore ../SeaGrantApp.sln
@@ -28,7 +28,7 @@ script:
   # - dotnet test 
   # - cd $TRAVIS_BUILD_DIR/src/SeaGrant.Web.Test
   # - dotnet test 
-  - dotnet publish $TRAVIS_BUILD_DIR/src/SeaGrant.Web -o $TRAVIS_BUILD_DIR/publish/
+  - dotnet publish $TRAVIS_BUILD_DIR/src/SeaGrant.Tsunami.Web -o $TRAVIS_BUILD_DIR/publish/
 
 matrix:
   include:

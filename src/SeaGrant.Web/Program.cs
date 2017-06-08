@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
 
-namespace SeaGrant.Web
+namespace SeaGrant.Tsunami.Web
 {
     public class Program
     {

@@ -1,4 +1,4 @@
-﻿using SeaGrant.Web.Models;
+﻿using SeaGrant.Tsunami.Web.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Serialization;
 
-namespace SeaGrant.Web.Utils
+namespace SeaGrant.Tsunami.Web.Utils
 {
     public class XmlUtils
     {

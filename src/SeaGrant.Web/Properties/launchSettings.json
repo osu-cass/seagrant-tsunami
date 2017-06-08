@@ -14,7 +14,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "SeaGrant.Web": {
+    "SeaGrant.Tsunami.Web": {
       "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {

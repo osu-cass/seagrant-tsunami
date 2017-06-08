@@ -4,7 +4,7 @@ using System.Collections.Immutable;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SeaGrant.Web.Models
+namespace SeaGrant.Tsunami.Web.Models
 {
     public class MainPageVM
     {

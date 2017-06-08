@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "name": "SeaGrant.Web",
+  "name": "SeaGrant.Tsunami.Web",
   "private": true,
   "devDependencies": {
     "grunt": "1.0.1",

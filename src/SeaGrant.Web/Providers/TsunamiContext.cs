@@ -1,11 +1,11 @@
-﻿using SeaGrant.Web.Models;
+﻿using SeaGrant.Tsunami.Web.Models;
 using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SeaGrant.Web.Providers
+namespace SeaGrant.Tsunami.Web.Providers
 {
     public class TsunamiContext
     {
