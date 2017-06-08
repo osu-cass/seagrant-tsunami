@@ -52,8 +52,5 @@ deploy:
     script: ./app_docker_deploy.sh
     on:
         tags: true
-  - provider: script
-    skip_cleanup: true
-    script: ./app_docker_deploy.sh
-    on:
-      branch: master
+
+  
