@@ -25,20 +25,33 @@
         display: flex;
         flex-direction: row;
         justify-content: space-around;
+        flex-grow: 1;
 
         .description-list {
             display: flex;
             flex-direction: column;
-            //justify-content: space-around;
             align-content: center;
-        }
+            padding-right: 10px;
 
-        .place-description {
-            padding-bottom: 20px;
+            .place-description {
+                padding-bottom: 25px;
+            }
+
         }
 
     }
-  
+}
+
+.VideoListClass {
+    list-style: none;
+    font-weight: bold;
+    flex-grow: 1;
+
+    li {
+        color: darkblue;
+        text-decoration: underline;
+        padding-bottom: 10px;
+    }
 }
 
 video {
