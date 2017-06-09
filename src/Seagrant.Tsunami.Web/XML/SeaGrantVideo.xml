@@ -4,19 +4,19 @@
   xsi:noNamespaceSchemaLocation="SeaGrantVideo.xsd">
   <Place>
     <Name>South Beach</Name>
-    <Description>The South Beach</Description>
-    <Order>2</Order>
+    <Description>If you are enjoying the beach near South Beach state Park there are numerous evacuation route you can take in the event of a tsunami event.</Description>
+    <Order>1</Order>
     <Videos>
       <Video>
         <VideoName>Jetty</VideoName>
         <FileName>/videos/Blue.mp4</FileName>
-        <Description>Description for Jetty</Description>
+        <Description>Even though certain routes look faster, such as the jetty road route, watch the video and see the how the tsunami wave behaves once it enters the mouth of the jetty.</Description>
         <Order>2</Order>
       </Video>
       <Video>
-        <VideoName>ParkingLot</VideoName>
+        <VideoName>Automobile Evacuation From Park</VideoName>
         <FileName>/videos/Green.mp4</FileName>
-        <Description>Description for parking lot</Description>
+        <Description>Even though certain routes look faster, such as getting in your vehicle, watch the video to see what the ramifications of vehicular evacuation may be.</Description>
         <Order>1</Order>
       </Video>
     </Videos>
@@ -30,7 +30,7 @@
         <VideoName>Rocks</VideoName>
         <FileName>/videos/Purple.mp4</FileName>
         <Description>Description for Rocks</Description>
-        <Order>1</Order>
+        <Order>2</Order>
       </Video>
       <Video>
         <VideoName>Sand</VideoName>

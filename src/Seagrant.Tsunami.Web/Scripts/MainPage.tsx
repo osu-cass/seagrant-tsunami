@@ -38,7 +38,7 @@ namespace MainPage {
             this.currentVideo = newPlace.videos[0];
             this.render();
         }
-
+         
         changeVideo = (newVideo: VideoDetails) => {
             this.currentVideo = newVideo;
             this.render();
@@ -46,11 +46,15 @@ namespace MainPage {
 
         render() {
             ReactDOM.render(
-                <div>
+                <div className="places-container">
                     <PlacesList.PlacesListComponent places={this.pageVM.places} onChangeHandler={this.changePlace} />
-                    <div>{this.currentPlace.description}</div>
-                    <VideoList.VideoListComponent videos={this.currentPlace.videos} updateVideoSelection={this.changeVideo} />
-                    <VideoFrame.VideoFrameComponent {...this.currentVideo} />
+                    <div className="video-container">
+                        <div className="description-list">
+                            <div className="place-description">{this.currentPlace.description}</div>
+                                <VideoList.VideoListComponent videos={this.currentPlace.videos} updateVideoSelection={this.changeVideo} />
+                            </div>
+                        <VideoFrame.VideoFrameComponent {...this.currentVideo} />
+                    </div>
                 </div>,
                 this.rootDiv
             );

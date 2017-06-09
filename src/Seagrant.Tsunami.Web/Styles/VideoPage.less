@@ -13,3 +13,40 @@
     width: calc(100%);
     text-align-last: center;
 }
+
+.places-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    .video-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        .description-list {
+            display: flex;
+            flex-direction: column;
+            //justify-content: space-around;
+            align-content: center;
+        }
+
+        .place-description {
+            padding-bottom: 20px;
+        }
+
+    }
+  
+}
+
+video {
+    max-width: 800px;
+    max-height: 700px;
+    padding-bottom: 20px;
+}
+
+#ScaredMessage {
+    padding-top: 100px;
+}
