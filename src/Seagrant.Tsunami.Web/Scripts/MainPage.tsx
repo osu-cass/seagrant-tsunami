@@ -64,7 +64,7 @@ namespace MainPage {
             this.currentVideo = undefined;
             this.render();
         }
-         
+
         changeVideo = (newVideo: VideoDetails) => {
             this.currentVideo = newVideo;
             this.render();
@@ -78,13 +78,10 @@ namespace MainPage {
                     <div className="video-container">
                         <div className="description-list">
                             <div className="place-description">{this.currentPlace.description}</div>
-                                <VideoList.VideoListComponent videos={this.currentPlace.videos} updateVideoSelection={this.changeVideo} />
-                            </div>
-                        <VideoFrame.VideoFrameComponent {...this.currentVideo} />
+                            <VideoList.VideoListComponent videos={this.currentPlace.videos} updateVideoSelection={this.changeVideo} />
+                        </div>
+                        {videoFrame}
                     </div>
-                    <div>{this.currentPlace.description}</div>
-                    <VideoList.VideoListComponent videos={this.currentPlace.videos} updateVideoSelection={this.changeVideo} />
-                    {videoFrame}
                 </div>,
                 this.rootDiv
             );
