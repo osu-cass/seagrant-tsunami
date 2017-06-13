@@ -24,6 +24,7 @@ namespace VideoList {
         }
 
         videoClickHandler = (video: MainPage.VideoDetails) => {
+            ga("send", "event", "button", "VideoClick", video.name);
             this.setState({
                 description: video.description
             });
