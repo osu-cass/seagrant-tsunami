@@ -36,6 +36,7 @@ namespace VideoList {
             });
             return (
                 <div id="DescList" className="DescListClass">
+                    <h2>Evacuation Videos</h2>
                     <ul className="VideoListClass">
                         {videos}
                     </ul>

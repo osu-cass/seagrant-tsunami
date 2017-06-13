@@ -31,10 +31,11 @@ namespace MainPage {
         currentVideo?: VideoDetails;
         timeoutHandle: number;
         timeoutDuration: number = 90000;
+        shouldAutoplay: boolean = false;
 
         constructor(private pageVM: MainPage.PageVM, private rootDiv: HTMLDivElement) {
             this.currentPlace = this.pageVM.places[0];
-            this.currentVideo = undefined;
+            this.currentVideo = this.currentPlace.videos[0];
 
             if (pageVM.demoMode) {
                 document.onload = this.resetTimer;
@@ -54,33 +55,41 @@ namespace MainPage {
         }
 
         resetPage = () => {
-            this.currentPlace = this.pageVM.places[0];
-            this.currentVideo = undefined;
-            this.render();
+            this.changePlace(this.pageVM.places[0]);
         }
 
         changePlace = (newPlace: Place) => {
             this.currentPlace = newPlace;
-            this.currentVideo = undefined;
+            this.currentVideo = newPlace.videos[0];
+            this.shouldAutoplay = false;
             this.render();
         }
 
         changeVideo = (newVideo: VideoDetails) => {
             this.currentVideo = newVideo;
+            this.shouldAutoplay = true;
             this.render();
         }
 
+        createVideoPlaceholder = () => {
+            return (<div className="VideoPlaceholder"> <img src="/images/video-placeholder.png" /> </div>);
+        }
+
         render() {
-            const videoFrame = this.currentVideo ? <VideoFrame.VideoFrameComponent {...this.currentVideo} /> : <div className="VideoPlaceholder">Please select a video.</div>
+            const videoProps: VideoFrame.Props = {
+                ...this.currentVideo,
+                shouldAutoplay: this.shouldAutoplay
+            }
             ReactDOM.render(
                 <div className="places-container">
                     <PlacesList.PlacesListComponent places={this.pageVM.places} onChangeHandler={this.changePlace} />
                     <div className="video-container">
                         <div className="description-list">
+                            <h2>{this.currentPlace.name}</h2>
                             <div className="place-description">{this.currentPlace.description}</div>
                             <VideoList.VideoListComponent videos={this.currentPlace.videos} updateVideoSelection={this.changeVideo} />
                         </div>
-                        {videoFrame}
+                        <VideoFrame.VideoFrameComponent {...videoProps} />
                     </div>
                 </div>,
                 this.rootDiv

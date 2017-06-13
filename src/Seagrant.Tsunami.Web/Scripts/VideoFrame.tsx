@@ -4,8 +4,12 @@
 
 namespace VideoFrame {
 
-    export class VideoFrameComponent extends React.Component<MainPage.VideoDetails, {}> {
-        constructor(props: MainPage.VideoDetails) {
+    export interface Props extends MainPage.VideoDetails {
+        shouldAutoplay: boolean;
+    }
+
+    export class VideoFrameComponent extends React.Component<Props, {}> {
+        constructor(props: Props) {
             super(props);
         }
 
@@ -13,7 +17,7 @@ namespace VideoFrame {
             return (
                 <div id="Video" className="Video">
                     <div className="video-spot">
-                        <video src={this.props.fileName} controls autoPlay> Sorry, this browser doesn't support embedded videos.</video>
+                        <video src={this.props.fileName} controls autoPlay={this.props.shouldAutoplay}> Sorry, this browser doesn't support embedded videos.</video>
                     </div>
                     <div>{this.props.description}</div>
                 </div>

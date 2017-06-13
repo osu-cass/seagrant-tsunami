@@ -5,12 +5,15 @@
     margin-left: @spacing-unit/2;
     margin-right: @spacing-unit/2;
     margin-bottom: @spacing-unit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     select {
         border: 2px double black;
         font-size: 2em;
-        height: calc(1em + 2px);
-        width: calc(100%);
+        height: calc(0.5em + 2px);
+        width: calc(50%);
         text-align-last: center;
     }
 }
@@ -61,6 +64,21 @@ video {
     padding-bottom: @spacing-unit/2;
 }
 
+.VideoPlaceholder {
+    max-width: @media-default-width;
+    max-height: @media-default-height;
+    margin-bottom: @spacing-unit/2;
+}
+
 .home-page {
     margin-bottom: @spacing-unit;
+}
+
+.demo-warning {
+    .label {
+        font-weight: bold;
+    }
+    .description {
+        //this space intentionally let blank
+    }
 }

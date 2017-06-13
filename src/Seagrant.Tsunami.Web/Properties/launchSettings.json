@@ -9,7 +9,10 @@
   },
   "profiles": {
     "SeaGrant.Tsunami.Web": {
-      "commandName": "IISExpress"
+      "commandName": "IISExpress",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
     }
   }
 }
