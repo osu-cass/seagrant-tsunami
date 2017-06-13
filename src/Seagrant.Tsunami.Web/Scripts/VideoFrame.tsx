@@ -15,11 +15,11 @@ namespace VideoFrame {
 
         render() {
             return (
-                <div id="Video" className="Video">
+                <div className="video-frame-container">
                     <div className="video-spot">
                         <video src={this.props.fileName} controls autoPlay={this.props.shouldAutoplay}> Sorry, this browser doesn't support embedded videos.</video>
                     </div>
-                    <div>{this.props.description}</div>
+                    <div><span className="video-label">{this.props.name}: </span>{this.props.description}</div>
                 </div>
             );
         }
