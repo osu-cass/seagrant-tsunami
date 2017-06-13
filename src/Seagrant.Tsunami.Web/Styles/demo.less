@@ -1,17 +1,18 @@
-﻿.TitleClass {
+﻿@import "constants.less";
+.TitleClass {
     height: calc(2em + 4px);
     width: calc(60%);
-    margin-left: 20%;
-    margin-right: 20%;
-    margin-bottom: 2%;
-}
+    margin-left: @spacing-unit/2;
+    margin-right: @spacing-unit/2;
+    margin-bottom: @spacing-unit;
 
-.TitleClass select {
-    border: 2px double black;
-    font-size: 2em;
-    height: calc(1em + 2px);
-    width: calc(100%);
-    text-align-last: center;
+    select {
+        border: 2px double black;
+        font-size: 2em;
+        height: calc(1em + 2px);
+        width: calc(100%);
+        text-align-last: center;
+    }
 }
 
 .places-container {
@@ -31,10 +32,10 @@
             display: flex;
             flex-direction: column;
             align-content: center;
-            padding-right: 10px;
+            padding-right: @spacing-unit/2;
 
             .place-description {
-                padding-bottom: 25px;
+                padding-bottom: @spacing-unit;
             }
 
         }
@@ -50,16 +51,16 @@
     li {
         color: darkblue;
         text-decoration: underline;
-        padding-bottom: 10px;
+        padding-bottom: @spacing-unit/3;
     }
 }
 
 video {
-    max-width: 800px;
-    max-height: 700px;
-    padding-bottom: 20px;
+    max-width: @media-default-width;
+    max-height: @media-default-height;
+    padding-bottom: @spacing-unit/2;
 }
 
-#ScaredMessage {
-    padding-top: 100px;
+.home-page {
+    margin-bottom: @spacing-unit;
 }
