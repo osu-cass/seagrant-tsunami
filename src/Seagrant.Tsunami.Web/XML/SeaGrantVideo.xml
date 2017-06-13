@@ -8,35 +8,66 @@
     <Order>1</Order>
     <Videos>
       <Video>
-        <VideoName>Jetty</VideoName>
+        <VideoName>Jetty Route</VideoName>
         <FileName>/videos/Blue.mp4</FileName>
         <Description>Even though certain routes look faster, such as the jetty road route, watch the video and see the how the tsunami wave behaves once it enters the mouth of the jetty.</Description>
-        <Order>2</Order>
+        <Order>1</Order>
       </Video>
       <Video>
         <VideoName>Automobile Evacuation From Park</VideoName>
         <FileName>/videos/Green.mp4</FileName>
         <Description>Even though certain routes look faster, such as getting in your vehicle, watch the video to see what the ramifications of vehicular evacuation may be.</Description>
-        <Order>1</Order>
+        <Order>2</Order>
       </Video>
     </Videos>
   </Place>
   <Place>
-    <Name>North Beach</Name>
-    <Description>The North Beach</Description>
-    <Order>1</Order>
+    <Name>Mid-Park Route</Name>
+    <Description>If you are enjoying the beach near South Beach state Park there are numerous evacuation route you can take in the event of a tsunami event</Description>
+    <Order>2</Order>
     <Videos>
       <Video>
         <VideoName>Rocks</VideoName>
         <FileName>/videos/Purple.mp4</FileName>
-        <Description>Description for Rocks</Description>
-        <Order>2</Order>
+        <Description>Even though certain routes look slower, like evacuating through the park, watch the video to see what happens.</Description>
+        <Order>1</Order>
       </Video>
       <Video>
-        <VideoName>Sand</VideoName>
+        <VideoName>Sewer Plant</VideoName>
         <FileName>/videos/Yellow.mp4</FileName>
-        <Description>Description for Sand</Description>
+        <Description>Even though certain routes look slower, like evacuating through the park, watch the video to see what happens.</Description>
         <Order>2</Order>
+      </Video>
+    </Videos>
+  </Place>
+   <Place>
+    <Name>Template</Name>
+    <Description>Template description. This is useful to know where this location is or any context. Each place can have many videos attached</Description>
+    <Order>3</Order>
+    <Videos>
+      <Video>
+        <VideoName>TemplateVideo</VideoName>
+        <FileName>/videos/Purple.mp4</FileName>
+        <Description>Template description for video, could describe path. A video describes a path for a given location</Description>
+        <Order>1</Order>
+      </Video>
+      <Video>
+        <VideoName>TemplateVideo</VideoName>
+        <FileName>/videos/Purple.mp4</FileName>
+        <Description>Template description for video, could describe path. A video describes a path for a given location</Description>
+        <Order>2</Order>
+      </Video>
+         <Video>
+        <VideoName>TemplateVideo</VideoName>
+        <FileName>/videos/Purple.mp4</FileName>
+        <Description>Template description for video, could describe path. A video describes a path for a given location</Description>
+        <Order>3</Order>
+      </Video>
+      <Video>
+        <VideoName>TemplateVideo</VideoName>
+        <FileName>/videos/Purple.mp4</FileName>
+        <Description>Template description for video, could describe path. A video describes a path for a given location</Description>
+        <Order>4</Order>
       </Video>
     </Videos>
   </Place>
