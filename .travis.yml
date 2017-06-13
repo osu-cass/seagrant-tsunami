@@ -54,7 +54,7 @@ deploy:
         tags: true
   - provider: script
     skip_cleanup: true
-    script: ./app_docker_deploy.sh
+    script: ./app_docker_deploy.sh && ./ecs_deploy seagrant-tsunami-service seagrant-tsunami
     on:
-        all_branches: true
+        all_branches: master
   
