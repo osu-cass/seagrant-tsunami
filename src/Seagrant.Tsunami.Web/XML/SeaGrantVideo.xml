@@ -46,25 +46,25 @@
     <Order>3</Order>
     <Videos>
       <Video>
-        <VideoName>TemplateVideo</VideoName>
+        <VideoName>TemplateVideo1</VideoName>
         <FileName>/videos/Purple.mp4</FileName>
         <Description>Template description for video, could describe path. A video describes a path for a given location</Description>
         <Order>1</Order>
       </Video>
       <Video>
-        <VideoName>TemplateVideo</VideoName>
+        <VideoName>TemplateVideo2</VideoName>
         <FileName>/videos/Purple.mp4</FileName>
         <Description>Template description for video, could describe path. A video describes a path for a given location</Description>
         <Order>2</Order>
       </Video>
          <Video>
-        <VideoName>TemplateVideo</VideoName>
+        <VideoName>TemplateVideo3</VideoName>
         <FileName>/videos/Purple.mp4</FileName>
         <Description>Template description for video, could describe path. A video describes a path for a given location</Description>
         <Order>3</Order>
       </Video>
       <Video>
-        <VideoName>TemplateVideo</VideoName>
+        <VideoName>TemplateVideo4</VideoName>
         <FileName>/videos/Purple.mp4</FileName>
         <Description>Template description for video, could describe path. A video describes a path for a given location</Description>
         <Order>4</Order>

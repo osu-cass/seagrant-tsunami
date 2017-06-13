@@ -35,7 +35,7 @@
         handleChange = (e: React.FormEvent<HTMLSelectElement>): void => {
             const placeName = e.currentTarget.value;
             const newPlace = this.findPlaceByName(placeName);
-            ga("send", "event", "dropdown", "ChangedPlace", placeName);
+            ga("send", "event", "Places", "SelectedPlace", placeName);
             this.setState({
                 currentPlace: newPlace
             });
