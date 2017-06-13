@@ -24,6 +24,7 @@ namespace VideoList {
         }
 
         videoClickHandler = (video: MainPage.VideoDetails) => {
+            ga("send", "event", "button", "VideoClick", video.name);
             this.setState({
                 description: video.description
             });
@@ -32,7 +33,7 @@ namespace VideoList {
 
         render() {
             const videos = this.props.videos.map((v: MainPage.VideoDetails) => {
-                return <VideoListElement.VideoListElementComponent video={v} videoClickHandler={this.videoClickHandler} />
+                return <VideoListElement.VideoListElementComponent video={v} videoClickHandler={this.videoClickHandler} key={v.name} />
             });
             return (
                 <div id="DescList" className="DescListClass">
