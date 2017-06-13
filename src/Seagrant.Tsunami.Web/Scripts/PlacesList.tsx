@@ -18,7 +18,7 @@
 
         createListElement = (place: MainPage.Place) => {
             return (
-                <option value={place.name}>{place.name}</option>
+                <option value={place.name} key={place.name}>{place.name}</option>
                 );
         }
 

@@ -20,7 +20,7 @@ namespace VideoListElement {
         render() {
             const video = this.props.video;
             return (
-                <li value={this.props.video.name} onClick={this.clickHandler}> {this.props.video.name}</li>
+                <li value={this.props.video.name} key={this.props.video.name} onClick={this.clickHandler}> {this.props.video.name}</li>
             );
         }
     }
