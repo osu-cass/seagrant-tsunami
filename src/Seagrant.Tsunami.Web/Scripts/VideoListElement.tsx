@@ -1,27 +1,24 @@
-﻿// A '.tsx' file enables JSX support in the TypeScript compiler, 
-// for more information see the following page on the TypeScript wiki:
-// https://github.com/Microsoft/TypeScript/wiki/JSX
+﻿import * as React from "react";
+import * as MainPage from "./MainPage";
 
-namespace VideoListElement {
-    export interface Props {
-        video: MainPage.VideoDetails;
-        videoClickHandler(video: MainPage.VideoDetails): void;
+export interface VideoListElement {
+    video: MainPage.VideoDetails;
+    videoClickHandler(video: MainPage.VideoDetails): void;
+}
+
+export class VideoListElementComponent extends React.Component<VideoListElement, {}> {
+    constructor(props: VideoListElement) {
+        super(props);
     }
 
-    export class VideoListElementComponent extends React.Component<Props, {}> {
-        constructor(props: Props) {
-            super(props);
-        }
+    clickHandler = () => {
+        this.props.videoClickHandler(this.props.video);
+    }
 
-        clickHandler = () => {
-            this.props.videoClickHandler(this.props.video);
-        }
-
-        render() {
-            const video = this.props.video;
-            return (
-                <li value={this.props.video.name} key={this.props.video.name} onClick={this.clickHandler}> {this.props.video.name}</li>
-            );
-        }
+    render() {
+        const video = this.props.video;
+        return (
+            <li value={this.props.video.name} key={this.props.video.name} onClick={this.clickHandler}> {this.props.video.name}</li>
+        );
     }
 }

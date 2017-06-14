@@ -1,24 +1,27 @@
-﻿// A '.tsx' file enables JSX support in the TypeScript compiler, 
-// for more information see the following page on the TypeScript wiki:
-// https://github.com/Microsoft/TypeScript/wiki/JSX
+﻿import * as React from "react";
+import * as ReactDOM from "react-dom";
+
+import * as VideoFrame from "./VideoFrame";
+import * as VideoList from "./VideoList";
+import * as PlacesList from "./PlacesList";
+
+export interface VideoDetails {
+    fileName: string;
+    name: string;
+    description: string;
+}
+
+export interface Place {
+    name: string;
+    description: string;
+    videos: VideoDetails[];
+}
 
 namespace MainPage {
 
     export interface PageVM {
         places: Place[];
         demoMode: boolean;
-    }
-
-    export interface VideoDetails {
-        fileName: string;
-        name: string;
-        description: string;
-    }
-
-    export interface Place {
-        name: string;
-        description: string;
-        videos: VideoDetails[];
     }
 
     interface State {
@@ -76,7 +79,7 @@ namespace MainPage {
         }
 
         render() {
-            const videoProps: VideoFrame.Props = {
+            const videoProps: VideoFrame.VideoFrame = {
                 ...this.currentVideo,
                 shouldAutoplay: this.shouldAutoplay
             }
@@ -100,7 +103,7 @@ namespace MainPage {
 
 }
 
-function initMainPage(pageVM: MainPage.PageVM) {
+export function initMainPage(pageVM: MainPage.PageVM) {
     const rootDiv = document.getElementById("page-container") as HTMLDivElement;
     const controller = new MainPage.Controller(pageVM, rootDiv);
 

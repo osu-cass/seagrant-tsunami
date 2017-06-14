@@ -11,21 +11,13 @@
 
 @section Scripts {
     <environment names="Development">
-        <script src="~/scripts/VideoListElement.js"></script>
-        <script src="~/scripts/VideoList.js"></script>
-        <script src="~/scripts/VideoFrame.js"></script>
-        <script src="~/scripts/PlacesList.js"></script>
-        <script src="~/scripts/MainPage.js"></script>
+        <script src="~/scripts/seagrant.main-page.js"></script>
     </environment>
     <environment names="Staging, Production">
-        <script src="~/scripts/VideoListElement.min.js"></script>
-        <script src="~/scripts/VideoList.min.js"></script>
-        <script src="~/scripts/VideoFrame.min.js"></script>
-        <script src="~/scripts/PlacesList.min.js"></script>
-        <script src="~/scripts/MainPage.min.js"></script>
+        <script src="~/scripts/seagrant.main-page.min.js"></script>
     </environment>
 
     <script type="text/javascript">
-        initMainPage(@Json.Serialize(Model));
+        EntryPoint.initMainPage(@Json.Serialize(Model));
     </script>
 }
