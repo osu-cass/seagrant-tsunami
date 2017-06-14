@@ -27,29 +27,17 @@ namespace MainPage {
     interface State {
         currentPlace: Place;
         currentVideo: VideoDetails;
+        shouldAutoplay: boolean;
     }
 
-    export class Controller {
-        currentPlace: Place;
-        currentVideo?: VideoDetails;
+    export class Container extends React.Component<PageVM, State> {
         timeoutHandle: number;
         timeoutDuration: number = 90000;
-        shouldAutoplay: boolean = false;
 
-        constructor(private pageVM: MainPage.PageVM, private rootDiv: HTMLDivElement) {
-            this.currentPlace = this.pageVM.places[0];
-            this.currentVideo = this.currentPlace.videos[0];
-
-            if (pageVM.demoMode) {
-                document.onload = this.resetTimer;
-                document.onkeypress = this.resetTimer;
-                document.onmousemove = this.resetTimer;
-                document.onmousedown = this.resetTimer;
-                document.ontouchstart = this.resetTimer;
-                document.onclick = this.resetTimer;
-                document.onscroll = this.resetTimer;
-                this.timeoutHandle = setTimeout(this.resetPage, this.timeoutDuration)
-            }
+        state = {
+            currentPlace: this.props.places[0],
+            currentVideo: this.props.places[0].videos[0],
+            shouldAutoplay: false
         }
 
         resetTimer = () => {
@@ -58,55 +46,62 @@ namespace MainPage {
         }
 
         resetPage = () => {
-            this.changePlace(this.pageVM.places[0]);
+            this.setState({
+                currentPlace: this.props.places[0],
+                currentVideo: this.props.places[0].videos[0],
+                shouldAutoplay: false,
+            });
         }
 
-        changePlace = (newPlace: Place) => {
-            this.currentPlace = newPlace;
-            this.currentVideo = newPlace.videos[0];
-            this.shouldAutoplay = false;
-            this.render();
+        changePlace = (currentPlace: Place) => {
+            this.setState({
+                currentPlace,
+                currentVideo: currentPlace.videos[0],
+                shouldAutoplay: false,
+            });
         }
 
-        changeVideo = (newVideo: VideoDetails) => {
-            this.currentVideo = newVideo;
-            this.shouldAutoplay = true;
-            this.render();
+        changeVideo = (currentVideo: VideoDetails) => {
+            this.setState({
+                currentVideo,
+                shouldAutoplay: true
+            });
         }
 
-        createVideoPlaceholder = () => {
-            return (<div className="VideoPlaceholder"> <img src="/images/video-placeholder.png" /> </div>);
+        componentDidMount() {
+            if (this.props.demoMode) {
+                document.addEventListener('onload', this.resetTimer);
+                document.addEventListener('onkeypress', this.resetTimer);
+                document.addEventListener('onmousemove', this.resetTimer);
+                document.addEventListener('onmousedown', this.resetTimer);
+                document.addEventListener('ontouchstart', this.resetTimer);
+                document.addEventListener('onclick', this.resetTimer);
+                document.addEventListener('onscroll', this.resetTimer);
+                this.timeoutHandle = setTimeout(this.resetPage, this.timeoutDuration)
+            }
         }
 
         render() {
-            const videoProps: VideoFrame.VideoFrame = {
-                ...this.currentVideo,
-                shouldAutoplay: this.shouldAutoplay
-            }
-            ReactDOM.render(
+            return (
                 <div className="places-container">
-                    <PlacesList.PlacesListComponent places={this.pageVM.places} onChangeHandler={this.changePlace} />
+                    <PlacesList.PlacesListComponent places={this.props.places} onChangeHandler={this.changePlace} />
                     <div className="video-container">
                         <div className="description-list">
-                            <h2>{this.currentPlace.name}</h2>
-                            <div className="place-description">{this.currentPlace.description}</div>
-                            <VideoList.VideoListComponent videos={this.currentPlace.videos} updateVideoSelection={this.changeVideo} />
+                            <h2>{this.state.currentPlace.name}</h2>
+                            <div className="place-description">{this.state.currentPlace.description}</div>
+                            <VideoList.VideoListComponent videos={this.state.currentPlace.videos} updateVideoSelection={this.changeVideo} />
                         </div>
-                        <VideoFrame.VideoFrameComponent {...videoProps} />
+                        <VideoFrame.VideoFrameComponent {...this.state.currentVideo} shouldAutoplay={this.state.shouldAutoplay} />
                     </div>
-                </div>,
-                this.rootDiv
-            );
+                </div>
+            )
         }
     }
-
 
 }
 
 export function initMainPage(pageVM: MainPage.PageVM) {
     const rootDiv = document.getElementById("page-container") as HTMLDivElement;
-    const controller = new MainPage.Controller(pageVM, rootDiv);
-
-    controller.render();
+    ReactDOM.render(<MainPage.Container {...pageVM} />, rootDiv);
 }
 

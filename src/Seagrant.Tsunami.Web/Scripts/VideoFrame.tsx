@@ -7,15 +7,18 @@ export interface VideoFrame extends MainPage.VideoDetails {
 }
 
 export class VideoFrameComponent extends React.Component<VideoFrame, {}> {
-    constructor(props: VideoFrame) {
-        super(props);
+
+    videoRef: HTMLVideoElement
+
+    componentDidUpdate() {
+        if (this.props.shouldAutoplay) this.videoRef.play()
     }
 
     render() {
         return (
             <div className="video-frame-container">
                 <div className="video-spot">
-                    <video src={this.props.fileName} controls autoPlay={this.props.shouldAutoplay}> Sorry, this browser doesn't support embedded videos.</video>
+                    <video ref={v => this.videoRef = v} src={this.props.fileName} controls preload="auto"> Sorry, this browser doesn't support embedded videos.</video>
                 </div>
                 <div><span className="video-label">{this.props.name}: </span>{this.props.description}</div>
             </div>
