@@ -42,7 +42,7 @@ namespace MainPage {
 
         resetTimer = () => {
             clearTimeout(this.timeoutHandle);
-            this.timeoutHandle = setTimeout(this.resetPage, this.timeoutDuration)
+            this.timeoutHandle = setTimeout(this.resetPage, this.timeoutDuration);
         }
 
         resetPage = () => {
@@ -51,6 +51,8 @@ namespace MainPage {
                 currentVideo: this.props.places[0].videos[0],
                 shouldAutoplay: false,
             });
+            this.timeoutHandle = setTimeout(this.resetPage, this.timeoutDuration);
+            this.forceUpdate();
         }
 
         changePlace = (currentPlace: Place) => {
@@ -69,7 +71,7 @@ namespace MainPage {
         }
 
         componentDidMount() {
-            if (this.props.demoMode) {
+            if (this.props.demoMode === true) {
                 document.addEventListener('onload', this.resetTimer);
                 document.addEventListener('onkeypress', this.resetTimer);
                 document.addEventListener('onmousemove', this.resetTimer);
@@ -84,7 +86,7 @@ namespace MainPage {
         render() {
             return (
                 <div className="places-container">
-                    <PlacesList.PlacesListComponent places={this.props.places} onChangeHandler={this.changePlace} />
+                    <PlacesList.PlacesListComponent places={this.props.places} currentPlace={this.state.currentPlace} onChangeHandler={this.changePlace} />
                     <div className="video-container">
                         <div className="description-list">
                             <h2>{this.state.currentPlace.name}</h2>
