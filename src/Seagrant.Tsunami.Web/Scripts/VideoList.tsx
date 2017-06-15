@@ -37,7 +37,7 @@ export class VideoListComponent extends React.Component<VideoList, State> {
         });
         return (
             <div id="DescList" className="DescListClass">
-                <h2>Evacuation Videos</h2>
+                <h2>Please choose a simulated evacuation:</h2>
                 <ul className="VideoListClass">
                     {videos}
                 </ul>

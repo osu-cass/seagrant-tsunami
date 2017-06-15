@@ -119,6 +119,25 @@ pre {
     padding-left: @spacing-unit;
 }
 
+@media screen and (min-width: 1500px) {
+    .video-container {
+        max-width: 80%;
+    }
+
+    .wrapper {
+        margin-right: 4%;
+        margin-left: 4%;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .wrapper {
+        max-width: 100vw;
+        max-height: 100vh;
+    }
+
+}
+ 
 @media only screen and (max-width: @on-palm) {
     .wrapper {
         max-width: -webkit-calc(@on-palm - (@spacing-unit * 2));

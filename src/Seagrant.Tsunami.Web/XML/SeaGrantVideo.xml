@@ -9,14 +9,14 @@
     <Videos>
       <Video>
         <VideoName>Jetty Route</VideoName>
-        <FileName>/videos/Blue.mp4</FileName>
-        <Description>Even though certain routes look faster, such as the jetty road route, watch the video and see the how the tsunami wave behaves once it enters the mouth of the jetty.</Description>
+        <FileName>/videos/Green.mp4</FileName>
+        <Description>Even though certain routes look faster, such as getting in your vehicle, watch the video to see what the ramifications of vehicular evacuation may be.</Description>
         <Order>1</Order>
       </Video>
       <Video>
         <VideoName>Automobile Evacuation From Park</VideoName>
-        <FileName>/videos/Green.mp4</FileName>
-        <Description>Even though certain routes look faster, such as getting in your vehicle, watch the video to see what the ramifications of vehicular evacuation may be.</Description>
+        <FileName>/videos/Blue.mp4</FileName>
+        <Description>Even though certain routes look faster, such as the jetty road route, watch the video and see the how the tsunami wave behaves once it enters the mouth of the jetty.</Description>
         <Order>2</Order>
       </Video>
     </Videos>
