@@ -18,7 +18,7 @@ export class VideoFrameComponent extends React.Component<VideoFrame, {}> {
         return (
             <div className="video-frame-container">
                 <div className="video-spot">
-                    <video ref={v => this.videoRef = v} src={this.props.fileName} controls preload="auto"> Sorry, this browser doesn't support embedded videos.</video>
+                    <video ref={v => this.videoRef = v} src={this.props.fileName} preload="auto" autoPlay> Sorry, this browser doesn't support embedded videos.</video>
                 </div>
                 <div><span className="video-label">{this.props.name}: </span>{this.props.description}</div>
             </div>

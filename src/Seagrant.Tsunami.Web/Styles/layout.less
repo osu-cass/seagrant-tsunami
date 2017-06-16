@@ -24,6 +24,7 @@
     justify-content: space-between;
     align-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .title-container {
@@ -32,6 +33,7 @@
     justify-content: space-between;
     align-content: center;
     align-items: center;
+    flex-wrap: wrap;
 
     .social-media {
         margin-left: @spacing-unit/2;
@@ -104,6 +106,10 @@
 
 }
 
+.video-container {
+    display: flex;
+}
+
 .site-footer {
     border-top: @border-height solid @grey-color-light;
     padding: @spacing-unit/2 0;
@@ -166,5 +172,8 @@
         padding: @spacing-unit/2 @spacing-unit/2;
     }
 
+    .video-container {
+        flex-wrap: wrap;
+    }
 }
 

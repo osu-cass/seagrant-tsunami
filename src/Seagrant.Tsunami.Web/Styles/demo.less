@@ -1,19 +1,16 @@
 ﻿@import "constants.less";
 .TitleClass {
     height: calc(2em + 4px);
-    width: calc(60%);
-    margin-left: @spacing-unit/2;
-    margin-right: @spacing-unit/2;
-    margin-bottom: @spacing-unit;
+    margin-bottom: calc(1em + 1px);
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 3;
 
     select {
         border: 2px double black;
         font-size: 2em;
         height: calc(0.5em + 2px);
-        width: calc(50%);
         text-align-last: center;
     }
 }
@@ -29,7 +26,7 @@
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-        flex-grow: 1;
+        flex-grow: 3;
 
         .description-list {
             display: flex;
