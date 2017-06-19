@@ -14,7 +14,6 @@
     "grunt-contrib-watch": "1.0.0",
     "grunt-ts": "6.0.0-beta.3",
     "grunt-webpack": "^3.0.0",
-    "jquery": "2.2.4",
     "less": "^2.7.2",
     "react": "15.3.2",
     "react-dom": "15.3.2",
@@ -23,7 +22,6 @@
     "webpack": "^2.6.1"
   },
   "dependencies": {
-    "@types/bootstrap": "^3.3.32",
     "@types/google.analytics": "0.0.29",
     "@types/react": "^15.0.12",
     "@types/react-dom": "^0.14.23"
