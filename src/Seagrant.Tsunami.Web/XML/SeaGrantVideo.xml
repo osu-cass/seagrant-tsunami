@@ -33,7 +33,7 @@
       </Video>
     </Videos>
   </Place>
-   <Place>
+  <!--<Place>
     <Name>Template</Name>
     <Description>Template description. This is useful to know where this location is or any context. Each place can have many videos attached</Description>
     <Order>3</Order>
@@ -63,5 +63,5 @@
         <Order>4</Order>
       </Video>
     </Videos>
-  </Place>
+  </Place>-->
 </Places>
