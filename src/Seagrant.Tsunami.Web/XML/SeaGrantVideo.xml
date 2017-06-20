@@ -19,10 +19,6 @@
         <Description>Even though certain routes look faster, such as the jetty road route, watch the video and see the how the tsunami wave behaves once it enters the mouth of the jetty.</Description>
         <Order>2</Order>
       </Video>
-    </Videos>
-    <Description>If you are enjoying the beach near South Beach state Park there are numerous evacuation route you can take in the event of a tsunami event</Description>
-    <Order>2</Order>
-    <Videos>
       <Video>
         <VideoName>Rocks</VideoName>
         <FileName>/videos/Purple.mp4</FileName>
