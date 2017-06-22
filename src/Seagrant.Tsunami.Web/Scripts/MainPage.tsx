@@ -86,10 +86,9 @@ namespace MainPage {
         render() {
             return (
                 <div className="places-container">
-                    <PlacesList.PlacesListComponent places={this.props.places} currentPlace={this.state.currentPlace} onChangeHandler={this.changePlace} />
                     <div className="video-container">
                         <div className="description-list">
-                            <h2>{this.state.currentPlace.name}</h2>
+                            <h1>{this.state.currentPlace.name}</h1>
                             <div className="place-description">{this.state.currentPlace.description}</div>
                             <VideoList.VideoListComponent videos={this.state.currentPlace.videos} updateVideoSelection={this.changeVideo} />
                         </div>
