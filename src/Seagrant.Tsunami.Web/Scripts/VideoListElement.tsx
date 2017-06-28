@@ -20,7 +20,7 @@ export class VideoListElementComponent extends React.Component<VideoListElement,
         return (
             <li value={this.props.video.name} key={this.props.video.name}>
                 <i className="fa fa-play-circle" aria-hidden="true"></i>
-                <div className="video-name" onClick={this.clickHandler}>  {this.props.video.name}</div>
+                <div className="video-name" onClick={this.clickHandler}>{this.props.video.name}</div>
             </li>
         );
     }
