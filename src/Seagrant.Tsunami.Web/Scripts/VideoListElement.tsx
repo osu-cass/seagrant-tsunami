@@ -18,7 +18,10 @@ export class VideoListElementComponent extends React.Component<VideoListElement,
     render() {
         const video = this.props.video;
         return (
-            <li value={this.props.video.name} key={this.props.video.name}><div className="video-name" onClick={this.clickHandler}>{this.props.video.name}</div></li>
+            <li value={this.props.video.name} key={this.props.video.name}>
+                <i className="fa fa-play-circle" aria-hidden="true"></i>
+                <div className="video-name" onClick={this.clickHandler}>  {this.props.video.name}</div>
+            </li>
         );
     }
 }

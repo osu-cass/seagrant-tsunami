@@ -98,7 +98,6 @@ namespace MainPage {
             )
         }
     }
-
 }
 
 export function initMainPage(pageVM: MainPage.PageVM) {
