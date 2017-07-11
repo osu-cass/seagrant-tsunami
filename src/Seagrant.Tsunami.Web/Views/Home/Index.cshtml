@@ -11,7 +11,8 @@
 
 @section Scripts {
     <environment names="Development">
-        <script src="~/scripts/seagrant.main-page.js"></script>
+        <script src="~/scripts/seagrant.main-page.js">
+        </script>
     </environment>
     <environment names="Staging, Production">
         <script src="~/scripts/seagrant.main-page.min.js"></script>
@@ -19,5 +20,6 @@
 
     <script type="text/javascript">
         EntryPoint.initMainPage(@Json.Serialize(Model));
+        document.addEventListener('contextmenu', event => event.preventDefault());
     </script>
 }
